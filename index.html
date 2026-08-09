@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Michael Clinton — Software Developer Portfolio</title>
+  <link rel="icon" href="images/blacklog-removebg-preview.png" type="image/png" height="100" width="100">
 
   <style>
     * {
@@ -17,25 +18,25 @@
     }
 
     body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
       line-height: 1.6;
-      color: #475569;
-      background-color: #f8fafc;
+      color: #94a3b8;
+      background-color: #0b0f19;
     }
 
     .navbar {
-      background-color: #ffffff;
-      border-bottom: 1px solid #e2e8f0;
+      background-color: rgba(11, 15, 25, 0.85);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid #1e293b;
       position: sticky;
       top: 0;
       z-index: 100;
-      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
     }
 
     .nav-content {
       max-width: 1000px;
       margin: 0 auto;
-      padding: 12px 24px;
+      padding: 14px 24px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -49,7 +50,7 @@
     }
 
     .brand-logo-img {
-      height: 48px;
+      height: 44px;
       width: auto;
       object-fit: contain;
       border-radius: 50px;
@@ -58,12 +59,12 @@
     .brand-logo-text {
       font-size: 18px;
       font-weight: 800;
-      color: #0f172a;
+      color: #f8fafc;
       letter-spacing: -0.5px;
     }
 
     .brand-logo-text span {
-      color: #059669;
+      color: #818cf8;
     }
 
     .nav-menu {
@@ -73,7 +74,7 @@
     }
 
     .nav-item {
-      color: #475569;
+      color: #94a3b8;
       text-decoration: none;
       font-size: 15px;
       font-weight: 500;
@@ -81,7 +82,7 @@
     }
 
     .nav-item:hover {
-      color: #059669;
+      color: #818cf8;
     }
 
     .main-wrapper {
@@ -91,9 +92,9 @@
     }
 
     .hero-banner {
-      background-color: #ecfdf5;
-      border: 1px solid #a7f3d0;
-      border-left: 5px solid #059669;
+      background: linear-gradient(135deg, rgba(99, 102, 241, 0.12) 0%, rgba(17, 24, 39, 0.6) 100%);
+      border: 1px solid #1f293d;
+      border-left: 5px solid #6366f1;
       border-radius: 16px;
       padding: 48px 36px;
       margin-bottom: 48px;
@@ -101,7 +102,6 @@
       align-items: center;
       gap: 32px;
       flex-wrap: wrap;
-      box-shadow: 0 4px 12px -2px rgba(5, 150, 105, 0.05);
     }
 
     .hero-info {
@@ -113,9 +113,9 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background-color: #ffffff;
-      color: #059669;
-      border: 1px solid #a7f3d0;
+      background-color: rgba(99, 102, 241, 0.12);
+      color: #a5b4fc;
+      border: 1px solid rgba(99, 102, 241, 0.25);
       font-size: 13px;
       font-weight: 600;
       padding: 6px 14px;
@@ -126,13 +126,14 @@
     .status-dot {
       width: 8px;
       height: 8px;
-      background-color: #059669;
+      background-color: #6366f1;
       border-radius: 50%;
+      box-shadow: 0 0 8px #6366f1;
     }
 
     .hero-title {
       font-size: 38px;
-      color: #0f172a;
+      color: #f8fafc;
       margin-bottom: 14px;
       line-height: 1.2;
       font-weight: 800;
@@ -141,7 +142,7 @@
 
     .hero-description {
       font-size: 17px;
-      color: #475569;
+      color: #94a3b8;
       margin-bottom: 24px;
       max-width: 580px;
     }
@@ -154,12 +155,12 @@
     }
 
     .profile-photo {
-      width: 160px;
-      height: 160px;
-      border-radius: 50%;
+      width: 200px;
+      height: 200px;
+      border-radius: 100px;
       object-fit: cover;
-      border: 4px solid #ffffff;
-      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+      border: 2px solid #1f293d;
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
     }
 
     .content-section {
@@ -168,7 +169,7 @@
 
     .section-title {
       font-size: 24px;
-      color: #0f172a;
+      color: #f8fafc;
       margin-bottom: 20px;
       position: relative;
       display: inline-block;
@@ -180,13 +181,13 @@
       display: block;
       width: 44px;
       height: 4px;
-      background-color: #059669;
+      background-color: #6366f1;
       border-radius: 2px;
       margin-top: 6px;
     }
 
     .section-text {
-      color: #475569;
+      color: #94a3b8;
       font-size: 16px;
       margin-bottom: 16px;
       line-height: 1.7;
@@ -204,18 +205,103 @@
       gap: 20px;
     }
 
+    .project-card {
+      background: #111827;
+      border: 1px solid #1f293d;
+      border-radius: 12px;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-4px);
+      border-color: #6366f1;
+      box-shadow: 0 10px 25px -5px rgba(99, 102, 241, 0.15);
+    }
+
+    .project-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: #f8fafc;
+      margin-bottom: 10px;
+    }
+
+    .project-desc {
+      font-size: 14px;
+      color: #94a3b8;
+      margin-bottom: 16px;
+      line-height: 1.6;
+    }
+
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: auto;
+    }
+
+    .project-tag {
+      font-size: 12px;
+      font-weight: 600;
+      background-color: #0b0f19;
+      color: #a5b4fc;
+      padding: 4px 10px;
+      border-radius: 4px;
+      border: 1px solid rgba(99, 102, 241, 0.25);
+    }
+
+    .contact-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+      gap: 24px;
+    }
+
+    .contact-details-box {
+      background: #111827;
+      border: 1px solid #1f293d;
+      border-radius: 16px;
+      padding: 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .contact-item-title {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      font-weight: 700;
+      color: #818cf8;
+      margin-bottom: 4px;
+    }
+
+    .contact-item-value {
+      font-size: 15px;
+      font-weight: 600;
+      color: #f8fafc;
+      text-decoration: none;
+      word-break: break-all;
+      transition: color 0.2s ease;
+    }
+
+    .contact-item-value:hover {
+      color: #a5b4fc;
+    }
+
     .skills-group {
-      background: #ffffff;
-      border: 1px solid #e2e8f0;
+      background: #111827;
+      border: 1px solid #1f293d;
       border-radius: 12px;
       padding: 20px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
     }
 
     .skills-category-title {
       font-size: 16px;
       font-weight: 700;
-      color: #0f172a;
+      color: #f8fafc;
       margin-bottom: 12px;
     }
 
@@ -227,9 +313,9 @@
     }
 
     .skill-badge {
-      background-color: #ecfdf5;
-      color: #059669;
-      border: 1px solid #a7f3d0;
+      background-color: rgba(99, 102, 241, 0.12);
+      color: #a5b4fc;
+      border: 1px solid rgba(99, 102, 241, 0.25);
       padding: 6px 12px;
       border-radius: 6px;
       font-size: 13px;
@@ -238,15 +324,15 @@
     }
 
     .skill-badge:hover {
-      background-color: #059669;
-      border-color: #059669;
+      background-color: #6366f1;
+      border-color: #6366f1;
       color: #ffffff;
     }
 
     .timeline {
       position: relative;
       padding-left: 24px;
-      border-left: 2px solid #e2e8f0;
+      border-left: 2px solid #1f293d;
     }
 
     .timeline-item {
@@ -265,22 +351,22 @@
       width: 12px;
       height: 12px;
       border-radius: 50%;
-      background-color: #059669;
-      border: 3px solid #ffffff;
-      box-shadow: 0 0 0 2px #059669;
+      background-color: #6366f1;
+      border: 3px solid #0b0f19;
+      box-shadow: 0 0 0 2px #6366f1;
     }
 
     .timeline-date {
       font-size: 13px;
       font-weight: 600;
-      color: #059669;
+      color: #818cf8;
       margin-bottom: 2px;
     }
 
     .timeline-role {
       font-size: 17px;
       font-weight: 700;
-      color: #0f172a;
+      color: #f8fafc;
     }
 
     .timeline-org {
@@ -290,12 +376,11 @@
     }
 
     .service-box {
-      background: #ffffff;
-      border: 1px solid #e2e8f0;
+      background: #111827;
+      border: 1px solid #1f293d;
       border-radius: 12px;
       padding: 24px;
-      border-top: 4px solid #059669;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
+      border-top: 4px solid #6366f1;
       transition: transform 0.25s ease;
     }
 
@@ -305,17 +390,16 @@
 
     .service-title {
       font-size: 17px;
-      color: #0f172a;
+      color: #f8fafc;
       margin-bottom: 8px;
       font-weight: 700;
     }
 
     .contact-card {
-      background: #ffffff;
-      border: 1px solid #e2e8f0;
+      background: #111827;
+      border: 1px solid #1f293d;
       border-radius: 16px;
       padding: 32px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
     }
 
     .form-group {
@@ -325,44 +409,43 @@
     .form-input, .form-textarea {
       width: 100%;
       padding: 12px 14px;
-      border: 1px solid #e2e8f0;
+      border: 1px solid #1f293d;
       border-radius: 8px;
       font-family: inherit;
       font-size: 15px;
-      color: #0f172a;
-      background-color: #f8fafc;
+      color: #f8fafc;
+      background-color: #0b0f19;
       transition: border-color 0.2s ease;
     }
 
     .form-input:focus, .form-textarea:focus {
       outline: none;
-      border-color: #059669;
-      background-color: #ffffff;
+      border-color: #6366f1;
     }
 
     .btn-primary {
       display: inline-block;
-      background-color: #059669;
+      background-color: #6366f1;
       color: #ffffff;
       padding: 12px 24px;
       border-radius: 8px;
       text-decoration: none;
-      font-weight: 600;
+      font-weight: 700;
       font-size: 15px;
       border: none;
       cursor: pointer;
-      transition: background-color 0.2s ease;
+      transition: background-color 0.2s ease, transform 0.1s ease;
     }
 
     .btn-primary:hover {
-      background-color: #047857;
+      background-color: #4f46e5;
     }
 
     .btn-secondary {
       display: inline-block;
-      background-color: #ffffff;
-      color: #0f172a;
-      border: 1px solid #e2e8f0;
+      background-color: transparent;
+      color: #f8fafc;
+      border: 1px solid #1f293d;
       padding: 12px 22px;
       border-radius: 8px;
       text-decoration: none;
@@ -372,16 +455,38 @@
     }
 
     .btn-secondary:hover {
-      background-color: #f8fafc;
-      border-color: #cbd5e1;
+      background-color: #111827;
+      border-color: #374151;
     }
 
     .footer-section {
-      text-align: center;
-      padding: 32px 0 16px;
+      padding: 40px 0 20px;
       color: #64748b;
       font-size: 14px;
-      border-top: 1px solid #e2e8f0;
+      border-top: 1px solid #1e293b;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .footer-link {
+      color: #94a3b8;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s ease;
+    }
+
+    .footer-link:hover {
+      color: #818cf8;
     }
 
     @media (max-width: 768px) {
@@ -425,11 +530,15 @@
       }
 
       .profile-photo {
-        width: 130px;
-        height: 130px;
+        width: 180px;
+        height: 280px;
       }
 
-      .contact-card {
+      .contact-wrapper {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-card, .contact-details-box {
         padding: 20px;
       }
 
@@ -445,11 +554,12 @@
   <nav class="navbar">
     <div class="nav-content">
       <a href="#home" class="brand-logo">
-        <img src="images/portlogo.png" alt="Michael Clinton Logo" class="brand-logo-img">
+        <img src="images/blacklog-removebg-preview.png" alt="Michael Clinton Logo" class="brand-logo-img" height="100" width="100">
         <span class="brand-logo-text">Michael <span>Clinton</span></span>
       </a>
       <ul class="nav-menu">
         <li><a href="#about" class="nav-item">About</a></li>
+        <li><a href="#projects" class="nav-item">Projects</a></li>
         <li><a href="#education" class="nav-item">Education</a></li>
         <li><a href="#skills" class="nav-item">Skills</a></li>
         <li><a href="#services" class="nav-item">Services</a></li>
@@ -470,20 +580,65 @@
         <p class="hero-description">Hi, I'm Michael Clinton — a Computer Science student focused on modern front-end web development, clean design, and great user experiences.</p>
         <div class="hero-actions">
           <a href="#contact" class="btn-primary">Get In Touch</a>
-          <a href="#services" class="btn-secondary">What I Do</a>
+          <a href="#projects" class="btn-secondary">View My Work</a>
+          <a href="#education" class="btn-primary">Education</a>
+          <a href="#skills" class="btn-secondary">What I Know</a>
         </div>
       </div>
-      <img src="images/ceo.jpg" alt="Michael Clinton" class="profile-photo">
+      <img src="images/ogo.png" alt="Michael Clinton" class="profile-photo">
     </header>
 
     <section id="about" class="content-section">
       <h2 class="section-title">About Me</h2>
       <p class="section-text">
-        I am a developer driven by clean architecture and intuitive visual design. Currently expanding my expertise in Computer Science, I focus on building accessible, fast-loading, and responsive web pages.
+        I am a dedicated Front-End Developer and Computer Science undergraduate with a passion for building functional, visually clean, and user-friendly web interfaces. My development journey centers around transforming ideas and complex requirements into structured, fast-loading, and responsive web environments.
       </p>
       <p class="section-text">
-        Whether crafting custom layouts with clean HTML/CSS or working with modern utility frameworks like Tailwind CSS, I prioritize clarity and maintainable code.
+        Beyond writing code, I enjoy breaking down user interface challenges, replicating real-world application layouts, and exploring how clear front-end engineering improves user engagement. Outside of core programming, I actively stay inspired by football, music, continuous learning, and exploring new web design trends.
       </p>
+    </section>
+
+    <section id="projects" class="content-section">
+      <h2 class="section-title">Featured Projects</h2>
+      <div class="grid-3">
+        
+        <div class="project-card">
+          <div>
+            <h3 class="project-title">M&C Training Academy</h3>
+            <p class="project-desc">A landing page and educational portal layout designed for learning programs, highlighting course offerings, modern styling, and simple navigation.</p>
+          </div>
+          <div class="project-tags">
+            <span class="project-tag">HTML5</span>
+            <span class="project-tag">CSS3</span>
+            <span class="project-tag">Responsive Design</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div>
+            <h3 class="project-title">FCMB Login Page</h3>
+            <p class="project-desc">A detailed front-end student project of the FCMB portal login interface, built to practice precise UI layout, form structure, and realistic pixel-perfect styling.</p>
+          </div>
+          <div class="project-tags">
+            <span class="project-tag">HTML5</span>
+            <span class="project-tag">CSS3</span>
+            
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div>
+            <h3 class="project-title">Restaurant Order App</h3>
+            <p class="project-desc">An interactive food ordering interface allowing users to browse menu items, select meals, and experience a smooth web menu workflow.</p>
+          </div>
+          <div class="project-tags">
+            <span class="project-tag">HTML5</span>
+            <span class="project-tag">CSS3</span>
+            <span class="project-tag">JavaScript</span>
+          </div>
+        </div>
+
+      </div>
     </section>
 
     <section id="education" class="content-section">
@@ -543,7 +698,7 @@
           <p class="section-text" style="font-size: 14px;">Building modern, reliable websites with structured HTML, CSS, and lightweight JavaScript.</p>
         </div>
         <div class="service-box">
-          <h3 class="service-title">Responsive UI Styling</h3>
+          <h3 class="service-title">Responsive Web Pages</h3>
           <p class="section-text" style="font-size: 14px;">Ensuring websites adapt smoothly across mobile phones, tablets, and desktop displays.</p>
         </div>
         <div class="service-box">
@@ -555,31 +710,64 @@
 
     <section id="contact" class="content-section">
       <h2 class="section-title">Let's Work Together</h2>
-      <div class="contact-card">
-        <p class="section-text" style="margin-bottom: 24px;">
-          Have a project in mind, need help building a website, or want to collaborate? Send a message below!
-        </p>
-        
-        <form action="mailto:michaellawal573@gmail.com" method="post" enctype="text/plain">
-          <div class="grid-2">
-            <div class="form-group">
-              <input type="text" id="name" name="Name" class="form-input" placeholder="Your Name" required>
-            </div>
-            <div class="form-group">
-              <input type="email" id="email" name="Email" class="form-input" placeholder="Your Email" required>
-            </div>
-          </div>
-          
-          <div class="form-group">
-            <textarea id="message" name="Message" rows="5" class="form-textarea" placeholder="Tell me about your project or idea..." required></textarea>
+      
+      <div class="contact-wrapper">
+        <div class="contact-details-box">
+          <div>
+            <div class="contact-item-title">Phone</div>
+            <a href="tel:09060954593" class="contact-item-value">09060954593</a>
           </div>
 
-          <button type="submit" class="btn-primary">Send Message</button>
-        </form>
+          <div>
+            <div class="contact-item-title">WhatsApp</div>
+            <a href="https://wa.me/2347070552993" target="_blank" class="contact-item-value">07070552993</a>
+          </div>
+
+          <div>
+            <div class="contact-item-title">Email</div>
+            <a href="mailto:michaellawal573@gmail.com" class="contact-item-value">michaellawal573@gmail.com</a>
+          </div>
+
+          <div>
+            <div class="contact-item-title">LinkedIn</div>
+            <a href="https://www.linkedin.com/in/lawal-michael" target="_blank" class="contact-item-value">Lawal Michael</a>
+          </div>
+        </div>
+
+        <div class="contact-card">
+          <p class="section-text" style="margin-bottom: 24px;">
+            Have a project in mind, need help building a website, or want to collaborate? Send a message below!
+          </p>
+          
+          <form action="mailto:michaellawal573@gmail.com" method="post" enctype="text/plain">
+            <div class="grid-2">
+              <div class="form-group">
+                <input type="text" id="name" name="Name" class="form-input" placeholder="Your Name" required>
+              </div>
+              <div class="form-group">
+                <input type="email" id="email" name="Email" class="form-input" placeholder="Your Email" required>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <textarea id="message" name="Message" rows="5" class="form-textarea" placeholder="Tell me about your project or idea..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn-primary">Send Message</button>
+          </form>
+        </div>
       </div>
     </section>
 
     <footer class="footer-section">
+      <ul class="footer-links">
+        <li><a href="#about" class="footer-link">About</a></li>
+        <li><a href="#projects" class="footer-link">Projects</a></li>
+        <li><a href="#education" class="footer-link">Education</a></li>
+        <li><a href="#skills" class="footer-link">Skills</a></li>
+        <li><a href="#services" class="footer-link">Services</a></li>
+        <li><a href="#contact" class="footer-link">Contact</a></li>
+      </ul>
       <p>&copy; 2026 Lawal Michael Clinton. Designed & Developed with HTML & CSS.</p>
     </footer>
 
